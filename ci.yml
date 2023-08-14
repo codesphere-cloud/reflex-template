@@ -1,0 +1,11 @@
+prepare:
+  steps:
+    - name: Install Dependencies
+      command: pipenv install
+    
+test:
+  steps: []
+run:
+  steps:
+    - name: Start Server
+      command: cd thread_app && API_URL=https://$WORKSPACE_DEV_DOMAIN:8000 reflex run
